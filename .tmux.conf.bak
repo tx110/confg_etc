@@ -1,0 +1,48 @@
+# bind a reload key
+bind R source-file ~/.tmux.conf \; display-message "Config reloaded.."
+
+# status bar 
+  # color 
+  set -g status-bg white 
+  set -g status-fg black 
+ 
+  # align style 
+  set-option -g status-justify centre
+ 
+  # left corner 
+  set-option -g status-left '#[bg=white,fg=colour52][#[fg=colour196]#S#[fg=colour52]]'
+  set-option -g status-left-length 20
+ 
+  # windows list 
+  setw -g automatic-rename on
+  set-window-option -g window-status-format '#[dim]#I:#[default]#W#[fg=grey,dim]'
+  set-window-option -g window-status-current-format '#[fg=colour196,bold]#I#[fg=colour52]:#[fg=colour196]#W#[fg=dim]'
+ 
+  # right corner 
+  set -g status-right '#[fg=colour18]#(id -u -n)@#H #[fg=colour52][#[fg=colour196]%m-%d %H:%M#[fg=colour52]]'
+
+# Remap window(pane?) navigation to vim
+  # move down
+  unbind-key j
+  bind-key j select-pane -D
+  # move up
+  unbind-key k
+  bind-key k select-pane -U
+  # move to left
+  unbind-key h
+  bind-key h select-pane -L
+  # move to right
+  unbind-key l
+  bind-key l select-pane -R
+
+
+# Remap copy mode navigation to vim
+setw -g mode-keys vi
+
+# zoom pane <-> window
+#http://tmux.svn.sourceforge.net/viewvc/tmux/trunk/examples/tmux-zoom.sh
+bind ^z run "tmux-zoom"
+
+# starts with 256-color support
+set -g default-terminal "screen-256color"
+
