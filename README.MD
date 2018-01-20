@@ -6,5 +6,5 @@ Repository for storing all kinds of personalized configuration files for differe
 ## ./tmux
 =====
 
-Customized and personalized tmux configuration file
+Customized and personalized tmux configuration file.
 Modified from https://github.com/gpakosz/.tmux
