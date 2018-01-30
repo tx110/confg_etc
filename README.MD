@@ -11,8 +11,16 @@ bash configuration file. Support:
 ## ./tmux
 
 Customized and personalized tmux configuration file.
+
 Modified from https://github.com/gpakosz/.tmux
 
 ## ./vim
 
 vim configuration file.
+
+## ./other
+
+Some other useful non-configuration files
+
+**256colors2.pl**
+  - script that test the 256 color support.
